@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% if(locals.datos) {%>
+      <p>Hola <%= datos.name %>, elegiste el color : <%= datos.color %>, tu mail es : <%= datos.email %> y tu edad es : <%= datos.age %> </p>
+    <% } else {%>  
+    <form action="/" method="post">
+      <label for="name">Ingrese su nombre</label>
+      <input type="text" name="name" id="name">
+      <select name="color" id="color">
+        <option value="rojo">Rojo</option>
+        <option value="azul">Azul</option>
+        <option value="verde">Verde</option>
+      </select>
+      </br>
+      <label for="email">Ingrese su email</label>
+      <input type="email" name="email" id="email">
+      <label for="age">Ingrese su edad</label>
+      <input type="number" name="age" id="age">
+      <input type="submit" value="Enviar">
+    </form>
+    <% } %> 
+  </body>
+</html>
